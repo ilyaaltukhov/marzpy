@@ -1,3 +1,6 @@
+import aiohttp.client_exceptions
+import aiohttp.http_exceptions
+import aiohttp.web_exceptions
 from .send_requests import *
 import aiohttp
 import json
@@ -23,11 +26,11 @@ class Admin:
                 result = await response.json()
                 result["panel_address"] = self.panel_address
                 return result
-        except aiohttp.exceptions.RequestException as ex:
-            print(f"Request Exception: {ex}")
-            return None
         except json.JSONDecodeError as ex:
             print(f"JSON Decode Error: {ex}")
+            return None
+        except Exception as ex:
+            print(f"Exception: {ex}")
             return None
 
     async def get_current_admin(self, token: dict):

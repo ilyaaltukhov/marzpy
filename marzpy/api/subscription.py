@@ -18,8 +18,8 @@ class Subscription:
                 return await response.json()
             else:
                 return base64.b64decode(result).decode("utf-8")
-        except aiohttp.exceptions.RequestException as ex:
-            print(f"Request Exception: {ex}")
+        except Exception as ex:
+            print(f"Exception: {ex}")
             return None
 
     async def get_subscription(self, sub_link: str):

@@ -5,13 +5,13 @@ with open("README.md", "r") as file:
 
 setup(
     name="marzpy",
-    version="0.0.6",
+    version="0.0.7",
     author="Mewhrzad",
     description="a simple application with python to manage Marzban panel",
     long_description="text/markdown",
     url="https://github.com/Mewhrzad/marzpy",
     keywords=["marzpy", "Marzban", "Gozargah", "Marzban python", "Marzban API"],
     packages=find_packages(),
-    install_requires=["aiohttp"],
+    install_requires=["aiohttp>=3.11.1"],
     classifiers=["Programming Language :: Python :: 3"],
 )
