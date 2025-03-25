@@ -1,5 +1,6 @@
 from .send_requests import *
-import aiohttp,json
+import aiohttp
+import json
 
 class Admin:
     def __init__(self, username: str, password: str, panel_address: str):
