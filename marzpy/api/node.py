@@ -13,6 +13,7 @@ class Node:
         xray_version="",
         status="",
         message="",
+        **_, # Stop causing error when marzban update
     ):
         self.name = name
         self.address = address
